@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115feb05588334447b5029c6f1aa8c83, type: 3}
+  m_Name: TelekinesisSettings
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningPOC.Player.TelekinesisSettings
+  _liftableLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  _raycastMaxDistance: 100
+  _playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _dropCheckPadding: {x: 0.05, y: 0.05, z: 0.05}
+  _maxLiftHeightY: 16
+  _liftDuration: 0.6
+  _liftEase: 9
+  _dropDuration: 0.5
+  _dropEase: 8
+  _dropBlockedShakeHeight: 0.08
+  _dropBlockedShakeDuration: 0.18
+  _dropBlockedShakeCount: 2
+  _dropBlockedShakeEase: 4
+  _floatOffsetY: 0.12
+  _floatDuration: 0.8
+  _floatEase: 4

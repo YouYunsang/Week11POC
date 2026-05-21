@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PixelisedSphereUnderwater
+  m_Name: PixelisedSpherePlayer
   m_Shader: {fileID: 4800000, guid: 71d6765ad72e11541bc1448c891bbcf9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -59,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PaletteLUT:
-        m_Texture: {fileID: 2800000, guid: 57619074bd98d5d42b683b5a1b8dbabe, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6e225122bed19f4caf920d6cafeaacc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_E9C4F4D0_Texture_1:
@@ -139,8 +139,8 @@ Material:
     - _AmbientLight: {r: 0.78113204, g: 0.78113204, b: 0.78113204, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeHighlightColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EdgeHighlightColor: {r: 0.23584905, g: 0.23584905, b: 0.23584905, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _PixelGridOrigin: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
