@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7cb702e71e748c45a8a1571b5c94d22, type: 3}
+  m_Name: CleaningToolSettings
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningPOC.Player.CleaningToolSettings
+  _maxDistanceFromPlayer: 8.41
+  _followSmoothTime: 0.04
+  _toolFollowLayerMask:
+    serializedVersion: 2
+    m_Bits: 2176
+  _toolFollowRaycastMaxDistance: 100
+  _surfaceOffset: 0.08
+  _dirtLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _attractRadius: 1.4
+  _attachDistance: 1
+  _attractSpeed: 10
+  _maxAttachedDirtCount: 25
+  _clusterBaseRadius: 0.18
+  _clusterRadiusPerDirt: 0.035
+  _clusterAttachDuration: 0.15
+  _attachedFollowSmoothTime: 0.06
+  _releaseScatterForce: 1.5
+  _releaseUpwardForce: 0.6
+  _trashBinLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  _trashBinRaycastMaxDistance: 100
+  _disposeDuration: 0.35
+  _disposeScaleDuration: 0.25

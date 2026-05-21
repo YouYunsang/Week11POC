@@ -8,7 +8,11 @@ namespace CleaningPOC.Player
     {
         public event Action<Vector2> MoveInputChanged;
         public event Action<Vector2> MousePositionChanged;
+
         public event Action PrimaryActionPressed;
+        public event Action PrimaryActionReleased;
+        public event Action<bool> PrimaryActionHoldChanged;
+
         public event Action<bool> TelekinesisHoldChanged;
 
         [Header("Input Actions")]
@@ -23,11 +27,13 @@ namespace CleaningPOC.Player
         private Vector2 _currentMousePosition;
         private Vector2 _previousMousePosition;
 
-        private bool _previousPrimaryActionPressed;
+        private bool _previousPrimaryActionHeld;
         private bool _previousTelekinesisHeld;
 
         public Vector2 CurrentMoveInput => _currentMoveInput;
         public Vector2 CurrentMousePosition => _currentMousePosition;
+
+        public bool IsPrimaryActionHeld { get; private set; }
         public bool IsTelekinesisHeld { get; private set; }
 
         private void OnEnable()
@@ -104,18 +110,29 @@ namespace CleaningPOC.Player
                 return;
             }
 
-            // 좌클릭 눌림 상태 확인
-            bool isPressed = _primaryActionReference.action.IsPressed();
+            // 좌클릭 유지 상태 확인
+            IsPrimaryActionHeld = _primaryActionReference.action.IsPressed();
 
-            if (!isPressed || _previousPrimaryActionPressed)
+            if (IsPrimaryActionHeld == _previousPrimaryActionHeld)
             {
-                _previousPrimaryActionPressed = isPressed;
                 return;
             }
 
-            // 좌클릭이 눌린 순간만 이벤트 발행
-            PrimaryActionPressed?.Invoke();
-            _previousPrimaryActionPressed = isPressed;
+            // 좌클릭 Hold 상태 변경 이벤트 발행
+            PrimaryActionHoldChanged?.Invoke(IsPrimaryActionHeld);
+
+            if (IsPrimaryActionHeld)
+            {
+                // 좌클릭을 누른 순간 이벤트 발행
+                PrimaryActionPressed?.Invoke();
+            }
+            else
+            {
+                // 좌클릭을 뗀 순간 이벤트 발행
+                PrimaryActionReleased?.Invoke();
+            }
+
+            _previousPrimaryActionHeld = IsPrimaryActionHeld;
         }
 
         private void ReadTelekinesisHoldInput()

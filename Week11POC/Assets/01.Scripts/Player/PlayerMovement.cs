@@ -41,7 +41,7 @@ namespace CleaningPOC.Player
             // 입력을 실제 이동 방향으로 변환
             Vector3 targetDirection = ConvertInputToDirection(_moveInput);
 
-            Debug.Log($"MoveInput: {_moveInput}, TargetDirection: {targetDirection}", this);
+            //Debug.Log($"MoveInput: {_moveInput}, TargetDirection: {targetDirection}", this);
 
             // 목표 속도 계산
             Vector3 targetVelocity = targetDirection * _settings.MoveSpeed;
@@ -60,7 +60,7 @@ namespace CleaningPOC.Player
             Vector3 velocity = _currentHorizontalVelocity;
             velocity.y = _verticalVelocity;
 
-            Debug.Log($"Velocity: {velocity}", this);
+            //Debug.Log($"Velocity: {velocity}", this);
 
             _characterController.Move(velocity * Time.deltaTime);
         }
